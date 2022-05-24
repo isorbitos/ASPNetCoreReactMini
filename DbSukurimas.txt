@@ -1,0 +1,4 @@
+to generate Db we need to create migration:
+dotnet ef migrations add FirstMigration -o "Data/Migrations"
+then:
+dotnet ef database update
