@@ -28,7 +28,7 @@ app.UseSwaggerUI(swaggerUIOptions =>
 //}
 
 app.UseHttpsRedirection();
-app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000"));
+app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000", "https://polite-hill-074d7d303.1.azurestaticapps.net"));
 
 app.MapGet("/get-all-posts",async ()=> await PostRepository.GetPostAsync())
     .WithTags("Post Endpoints");
